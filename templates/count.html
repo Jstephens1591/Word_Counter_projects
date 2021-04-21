@@ -1,0 +1,18 @@
+<center><H1> {{ count }} Is the number of words typed!!! </h1></center>
+
+<br>
+<br>
+<center><h1> This is what you typed </h1></center>
+<center>{{ fulltext }}</center>
+
+
+<center> <h3> Here are the words you used and how many times you used them </h3></center>
+
+<center>{% for word, counttotal in sortedwords %} </center>
+
+<center>{{word}} - {{ counttotal }}</center>
+
+
+<center>{% endfor %}</center>
+
+<center> <a href="{% url 'homepage' %}"> New Count? </a> </center>
